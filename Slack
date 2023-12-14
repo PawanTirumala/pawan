@@ -1,0 +1,951 @@
+1.Creating an SNS Notification (Billig), alarm [TE].
+2.AMI Creation. through lanch Ec2, intance [Launch template]
+3.Application load balancer to Serving the load in Multipule intance.
+4.Auto scaling for load balancer.
+5.a)Creating IAM Roles for instance.
+  b)Creating IAM polices and giving region based permissions.
+6.MFA. Creation for user
+7.a).Ec2 to instance access to S3.(GUI, CLI).
+  b).Bucket versioning.	
+  c).Recovering delete files in S3.
+  d).Moving files from one account S3 bucket to another acoount S3 bucket.(CLI,GUI).
+  e).S3 public access with (Read ,write) permissions.
+8.a)Deploy nginx Server on ubuntu.
+  b)Apache server on ubuntu.
+  c)User creation in instance level and permissions for user.
+9.path based Routing.
+10.vpc creating New vpc and Subnets conecting to internet-gateway through Connect EC₂ instance, using own vpc and deploy apache server.
+11.vpc peering.
+12.EBS files automatically move to s3for particular time.
+13.a)EFS mount and un mount in single instance.
+   b)Server the file in Multipule instance.
+14.RDS creation my sql work bench.(public access yes or no).
+15.Lambda Creation.(GUI,CLI,SAM).
+16.Word press instalation.
+17.Connect EC2 to through different key pair(Mount,AMI,Copynewkeypair).
+18.a)Lambda creation files when we upload files in S3 should trigger the mail.
+   b)lamda logs.
+19.cloud watch monitoring when ever metrics increased it should trigger the mail.
+20.commands for cpu,memory,storage,usage.
+21.mount and unmount volumes(EBS) and extend.
+22.HTTP To HTTPS Redirection.
+
+
+Pawan_Tirumala
+  4:39 PM
+te ante sns e services ki use cheyavachu anedhi check chey manru
+
+
+Pawan_Tirumala
+  3:01 PM
+https://www.digitalocean.com/community/tutorials/install-wordpress-on-ubuntu
+
+digitalocean.comdigitalocean.com
+How to install WordPress on Ubuntu 18.04  | DigitalOcean
+Technical tutorials, Q&A, events — This is an inclusive place where developers can find or lend support and discover new ways to contribute to the community.
+
+
+revathi
+  4:59 PM
+1  apt update && apt upgrade
+    2  apt install apache2
+    3  systemctl status apache2
+    4  apt install mariadb-server mariadb-client
+    5  mysql_secure_installation
+    6  apt install php php-mysql
+    7  nano /var/www/html/info.php
+    8  cat /var/www/html/info.php
+    9  mysql -u root -p
+   10  cd /tmp && wget https://wordpress.org/latest.tar.gz
+   11  tar -xvf latest.tar.gz
+   12  cp -R /var/www/html/
+   13  ls -la
+   14  cd wordpress/
+   15  ls -la
+   16  cp -r . /var/www/html/
+   17  cd /var/www/html/
+   18  ls -la
+   19  cp -R /var/www/html/
+   20  chown -R www-data:www-data /var/www/html/
+   21  chmod -R 755 /var/www/html/
+   22  mkdir /var/www/html/wp-content/uploads
+   23  chown -R www-data:www-data /var/www/html/wp-content/uploads/
+
+
+revathi
+  6:19 PM
+https://roothoot-dvop-lrp1396.slack.com/archives/D05TVE596H3/p1696419307288199
+
+
+
+saiganeshs
+# Install and configure Let's Encrypt for SSL
+sudo apt-get install certbot python3-certbot-apache -y
+sudo certbot --apache -d arjuna.roothoot.com -d www.arjuna.roothoot.com
+From a private conversation | Oct 4th
+
+
+revathi
+  4:06 PM
+https://hostadvice.com/how-to/web-hosting/ubuntu/how-to-configure-nginx-and-apache-together-in-ubuntu/
+
+
+Pawan_Tirumala
+  11:39 AM
+http://lb-1-842239299.ap-south-1.elb.amazonaws.com/
+
+
+Pawan_Tirumala
+  11:58 AM
+1.Creating an SNS Notification (Billing), alarm .
+2.Application load balancer to Serving the load in Multiple instance.
+path based routing
+3.AMI Creation. through lanch Ec2, intance [Launch template]
+  Auto scaling for load balancer.
+4.a)Creating IAM Roles, Users, IAM polices for giving permissions.
+  b)MFA. Creation for user.
+5.a).Ec2 to instance access to S3.(GUI, CLI).
+  b).Bucket versioning.	
+  c).Recovering delete files in S3.
+  d).Moving files from one account S3 bucket to another acoount S3 bucket.(CLI,GUI).
+  e).S3 public access with (Read ,write) permissions.
+6.a)Deploy nginx Server on ubuntu.
+  b)Apache server on ubuntu.
+  c)User creation in instance level and permissions for user.
+7.Creating New vpc and Subnets conecting to internet-gateway through Connect EC2 instance, using own vpc and deploy apache server.
+ NAT Gateway connect privately
+8.Vpc peering.
+9.EBS files automatically move to s3 at particular time.
+10.a)EFS mount and un mount in single instance.
+   b)Server the file in Multiple instance.
+11.RDS creation my sql work bench.(public access yes or no).
+12.Lambda Creation.(GUI,CLI,SAM).
+13.Word press installation.
+14.Connect EC2 to through different key pair(Mount,AMI,Copynewkeypair).
+15.a)Lambda creation files when we upload files in S3 should trigger the mail.
+   b)lamda logs.
+16.cloud watch monitoring when ever metrics increased it should trigger the mail.
+17.commands for cpu,memory,storage,usage on server level.
+18.mount and unmount volumes(EBS) and extend.
+19.HTTP To HTTPS Redirection. (edited)
+
+
+Pawan_Tirumala
+  11:43 AM
+PublicIPs: 65.2.191.66    PrivateIPs: 172.31.33.23
+
+
+Pawan_Tirumala
+  10:20 AM
+nuvu chesina task ani kuda swathiki pampu
+
+
+Pawan_Tirumala
+  11:09 AM
+
+
+
+Pawan_Tirumala
+https://medium.com/@ghazanfaralidevops/devops-project-create-a-game-using-docker-and-deploy-to-aws-beanstalk-b49b9b6e2af6
+Day 4 of DevOps Projects :arrow_heading_up:
+Direct Message | Oct 16th | View conversation
+
+
+Pawan_Tirumala
+  2:35 PM
+http://2048-game-env.eba-hvfuanhd.ap-south-1.elasticbeanstalk.com/
+
+
+Pawan_Tirumala
+  2:29 PM
+efs -ec2.txt
+ 
+sudo apt-get update
+    2  sudo apt-get upgrade
+    3  sudo apt-get install apache2
+    4  sudo systemclt status apache2
+    5  sudo systemctl apache2 status
+Click to expand inline (39 lines)
+2:30
+efs-ec22.txt
+ 
+  sudo apt-get install nfs-common
+    2  df -th
+    3  df -Th
+    4  sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-04038a9e4555d46bc.efs.ap-south-1.amazonaws.com:/ efs
+    5  sudo mkdir /mnt/efs
+Click to expand inline (34 lines)
+
+
+
+
+
+Pawan_Tirumala
+  10:19 AM
+https://aws.amazon.com/getting-started/hands-on/launch-a-wordpress-website/
+
+Amazon Web Services, Inc.Amazon Web Services, Inc.
+Launch a Wordpress Website
+Launch a WordPress website with Amazon Lightsail.
+
+
+revathi
+  11:58 AM
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html#python-flask-setup-venv
+docs.aws.amazon.comdocs.aws.amazon.com
+Deploying a Flask application to Elastic Beanstalk - AWS Elastic Beanstalk
+Create, configure and deploy a Flask application to AWS Elastic Beanstalk with the EB CLI.
+
+
+Pawan_Tirumala
+  3:08 PM
+#awsefscreate-file-system--creation-tokenMyEFSFileSystem--availability-zone-nameap-south
+-1a
+
+
+Pawan_Tirumala
+  5:59 PM
+https://docs.aws.amazon.com/amazonglacier/latest/dev/uploading-an-archive-single-op-
+
+
+Pawan_Tirumala
+  4:06 PM
+https://medium.com/@ghazanfaralidevops/devops-project-create-a-game-using-docker-and-deploy-to-aws-beanstalk-b49b9b6e2af6
+
+MediumMedium
+DevOps Project — Create a Game using Docker and Deploy to AWS BeanStalk
+Introduction:
+Reading time
+3 min read
+Sep 30th (208 kB)
+https://medium.com/@ghazanfaralidevops/devops-project-create-a-game-using-docker-and-deploy-to-aws-beanstalk-b49b9b6e2af6
+
+
+
+revathi
+  11:40 AM
+polbcys3.txt
+ 
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+Click to expand inline (13 lines)
+
+
+revathi
+  12:23 PM
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+
+revathi
+  12:32 PM
+https://832660045979.signin.aws.amazon.com/console
+
+
+revathi
+  2:52 PM
+.CreateaNetworkOnAWSCloudbyusingCLIandlaunchserveranddeployanywebapp
+
+
+revathi
+  3:08 PM
+ami-055a538d10434ceb3
+
+
+revathi
+  3:38 PM
+https://github.com/aws-samples/eb-node-express-sample
+GitHubGitHub
+GitHub - aws-samples/eb-node-express-sample: Sample Express application for AWS Elastic Beanstalk
+Sample Express application for AWS Elastic Beanstalk - GitHub - aws-samples/eb-node-express-sample: Sample Express application for AWS Elastic Beanstalk (63 kB)
+https://github.com/aws-samples/eb-node-express-sample
+
+
+
+Pawan_Tirumala
+  5:19 PM
+hDU6yGI0gadc0Os4pNvS
+
+
+Pawan_Tirumala
+  12:30 PM
+sudo
+apt update
+sudo
+apt install openjdk
+-
+8
+-
+jdk
+cd /
+tmp
+/
+wget
+https://mirrors.estointernet.in/apache/maven/maven
+-
+3/3.6.3/binaries/apache
+-
+maven
+-
+3.6.3
+-
+bin.tar.gz
+cd /opt/
+sudo
+tar
+-
+xvzf
+/
+tmp
+/apache
+-
+maven
+-
+3.6.3
+-
+bin.tar.gz
+cd apache
+-
+maven
+-
+3.6.3/
+chmod
+g+w,o+w
+apache
+-
+maven
+-
+3.6.3
+# edit /etc/environment and the following lines to the end M2_HOME=/opt/apache
+-
+maven
+-
+3.6.3
+PATH=$PATH:$M2_HOME/bin
+# logout and login
+
+
+Pawan_Tirumala
+  12:37 PM
+sudo apt update
+sudo apt install openjdk-8-jdk
+cd /tmp/
+wgethttps://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+cd /opt/ sudotar -xvzf/tmp/apache-maven-3.6.3-bin.tar.gz
+cd apache-maven-3.6.3/
+chmodg+w,o+wapache-maven-3.6.3
+ # edit /etc/environment and the following lines to the end M2_HOME=/opt/apache-maven-3.6.3
+ PATH=$PATH:$M2_HOME/bin
+# logout and login
+12:41
+git clone https://github.com/muralikrishna188/spring
+-
+petclinic.git
+
+
+revathi
+  12:11 PM
+ubuntu@ip-10-100-0-242:~$ history
+    1  clear
+    2  sudo apt-get update
+    3  sudo apt-get upgrade
+    4  sudo apt-get install -y nfs-common
+    5  sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0fa30f8f21282b0b0.efs.ap-south-1.amazonaws.com:/ efs
+    6  ls
+    7  ls -la
+    8  sudo mkdir efs
+    9  sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0fa30f8f21282b0b0.efs.ap-south-1.amazonaws.com:/ efs
+   10  history
+
+
+revathi
+  12:42 PM
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::your-bucket-name/*"
+        }
+    ]
+}
+
+
+revathi
+  3:34 PM
+aws configure
+   16  aws s3 ls
+   17  aws s3 ls s3://webapp12345/
+   18  aws s3 cp /var/www/html/index.html s3://webapp12345
+   19  aws s3 ls s3://webapp12345/
+
+
+Pawan_Tirumala
+  3:54 PM
+https://www.javatpoint.com/broadcasting-chat-server-project
+
+www.javatpoint.com
+Broadcasting Chatserver Project | Core Java Projects - javatpoint
+Broadcasting project in java with projects on java, php, android, spring, hibernate, node.js, angularjs, c programming, html, css, javascript, jquery, ajax, xml, web services, python, embedded system, robotics etc.
+3:55
+project
+Zip
+ 
+
+chatserver.zip
+Zip
+
+
+Pawan_Tirumala
+  5:21 PM
+pandi
+5:22
+image.png
+ 
+image.png
+5:22
+[/var/log/messages]
+datetime_fpandiormat = %b %d %H:%M:%S
+file = /var/log/mdoomaessages
+buffer_duration = 5000]
+log_stream_name = {instance_id}
+initial_position = start_of_file
+log_gpandi roup_name = edwiki_app_logs
+
+
+revathi
+  5:38 PM
+image.png
+ 
+image.png
+5:41
+pyenv install 3.5.10
+
+
+Pawan_Tirumala
+  12:24 PM
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+button { 
+       background-color: #4CAF50; 
+       width: 100%;
+        color: orange; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+ form { 
+        border: 3px solid #F1F1F1; 
+    } 
+ input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid green; 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.7; 
+    } 
+  .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+        
+     
+ .container { 
+        padding: 25px; 
+        background-color: lightblue;
+    } 
+</style> 
+</head>  
+<body>  
+    <center> <h1> Student Login Form </h1> </center> 
+    <form>
+        <div class="container"> 
+            <label>Username : </label> 
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label> 
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Login</button> 
+            <input type="checkbox" checked="checked"> Remember me 
+            <button type="button" class="cancelbtn"> Cancel</button> 
+            Forgot <a href="#"> password? </a> 
+        </div> 
+    </form>   
+</body>   
+</html>
+
+
+Pawan_Tirumala
+  5:13 PM
+inka tym padathadha
+
+
+Pawan_Tirumala
+  12:55 PM
+https://www.youtube.com/watch?v=qxy9RgvglkI
+
+YouTubeYouTube | thecodeschool
+AWS EFS | Create  & Mount EFS file system from multiple EC2 Instances  | Demo 
+
+
+
+Pawan_Tirumala
+  5:43 PM
+https://www.digitalocean.com/community/tutorials/install-tomcat-on-linux
+
+digitalocean.comdigitalocean.com
+A Complete Guide to Install Tomcat on Linux  | DigitalOcean
+Technical tutorials, Q&A, events — This is an inclusive place where developers can find or lend support and discover new ways to contribute to the community.
+
+
+Pawan_Tirumala
+  11:01 AM
+https://amazoncloudwatch-agent-region.s3.region.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
+
+
+Pawan_Tirumala
+  11:22 AM
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-commandline-fleet.html
+
+docs.aws.amazon.comdocs.aws.amazon.com
+Installing and running the CloudWatch agent on your servers - Amazon CloudWatch
+Explains how to install and run the CloudWatch agent on your servers.
+
+
+Pawan_Tirumala
+  12:17 PM
+https://devopscube.com/how-to-setup-and-push-serverapplication-logs-to-aws-cloudwatch/
+
+DevopsCubeDevopsCube
+How To Push Ec2 Logs To Cloudwatch [Logs And Metrics]
+In this blog, I will show you how to push ec2 logs to Cloudwatch using the Cloudwatch agent. You can also send ec2 system metrics to cloudwatch.
+Written by
+Bibin Wilson
+Time to read
+6 minutes
+Feb 20th (13 kB)
+https://devopscube.com/how-to-setup-and-push-serverapplication-logs-to-aws-cloudwatch/
+
+
+
+Pawan_Tirumala
+  2:39 PM
+https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-helper-ec2-linux.html
+
+docs.aws.amazon.comdocs.aws.amazon.com
+Mounting on Amazon EC2 Linux instances using the EFS mount helper - Amazon Elastic File System
+Mount your EFS file system on Amazon EC2 instances using the EFS mount helper.
+
+
+Pawan_Tirumala
+  2:30 PM
+https://www.youtube.com/watch?v=1_Zs0gQq1Yc
+
+YouTubeYouTube | Mukesh otwani
+How To Install Jenkins On Windows 10 
+
+
+
+Pawan_Tirumala
+  3:24 PM
+ls
+    2  cd D
+    3  cd D:\Roothoot\Devops\Azure
+    4  cd \Roothoot\Devops\Azure
+    5  cd \
+    6  ls
+    7  cd D:
+    8  ls
+    9  cd Roothoot/
+   10  ls
+   11  cd Devops/
+   12  ls
+   13  cd Azure/
+   14  pwd
+   15  ssh -i azureuser@20.235.141.187
+   16  ls -la
+   17  chmod 400 demo-azure.pem
+   18  ls -la
+   19  ssh -i azureuser@20.235.141.187
+   20  ssh -i azureuser@20.235.141.187
+   21  cd .
+   22  cd ..
+   23  cd AWS
+   24  ls
+   25  ls -la
+   26  chmod 400 demo-test.pem
+   27  ls -la
+   28  ssh -i "demo-test.pem" ubuntu@65.0.106.234
+   29  ls
+   30  ssh -i "demo-test.pem" ubuntu@65.0.106.234
+   31  chmod 400 demo-test.pem
+   32  ssh -i "demo-test.pem" ubuntu@65.0.106.234
+   33  vi demo-test.pem
+   34  clear
+   35  cd ..
+   36  cd Azure/
+   37  ssh -i azureuser@20.235.141.187
+   38  ls
+   39  ssh -i "demo-azure.pem" azureuser@20.235.141.187
+   40  cd Azure
+   41  cd AWs
+   42  cd ..
+   43  cd ..
+   44  cd AWs
+   45  cd Devops/
+   46  ls
+   47  cd AWS/
+   48  ls
+   49  ssh -i "demo-test.pem" ubuntu@ec2-65-0-106-234.ap-south-1.compute.amazonaws.com
+   50  chmod 400 demo-test.pem
+   51  ssh -i "demo-test.pem" ubuntu@ec2-65-0-106-234.ap-south-1.compute.amazonaws.com
+   52  git init
+   53  ls
+   54  ls -la
+   55  git branch -m
+   56  git branch -m main
+   57  ls -la
+   58  git status
+   59  ls
+   60  git add 2-1v.txt
+   61  git status
+   62  git commit -m "v1"
+   63  git status
+   64  git log
+   65  ls
+   66  cd git
+   67  ls
+   68  ls
+   69  cd
+   70  ls
+   71  cd git/branchproject/
+   72   git branch -M main
+   73  git remote add origin https://github.com/PawanTirumala/branch.git
+   74  git push -u origin main
+   75  vin file1.txt
+   76  vim file1.txt
+   77  nano file1.txt
+   78  git status
+   79  git add file1.txt
+   80  git commit -m "file1"
+   81  git checkout -b cherry
+   82  ls
+   83  nano cherry
+   84  git commit -a -m "cherry1"
+   85  git add .
+   86  git commit -m "cherry1"
+   87  git log
+   88  nano cherry
+   89  git diff
+   90  git show
+   91  git log
+   92  git status
+   93  git add .
+   94  git commit -m "cherry changed"
+   95  git log
+   96  git log --oneline
+   97  git log
+   98  git checkout main
+   99  git cherry-pick a1e09a1eb4092d20ef25d88636277f9a148de440
+  100  ls
+  101  git log --oneline
+  102  git log
+  103  git checkout -b merge
+  104  ls
+  105  nano merge1
+  106  git add .
+  107  git commit -m "merge1"
+  108  clear
+  109  ls
+  110  ls
+  111  touch file2 file3
+  112  git add .
+  113  git commit -m "mfile2"
+  114  touch file4
+  115  git add file4
+  116  git commit -m "mfile4"
+  117  git log --oneline
+  118  ls
+  119  git checkout merge
+  120  ls
+  121  touch merge2
+  122  git add .
+  123  git commit -m "merge2"
+  124  git log --oneline
+  125  git checkout main
+  126  ls
+  127  git checkout cherry
+  128  git log
+  129  git checkout main
+  130  git cherry-pick a1e09a1eb4092d20ef25d88636277f9a148de440
+  131  ls
+  132  git log --oneline
+  133  git merge
+  134  git checkout main
+  135  git log
+  136  ls
+  137  nano cherry
+  138  git checkout main
+  139  git log
+  140  ls
+  141  nano cherry
+  142  git merge
+  143  ls
+  144  rm cherry
+  145  ls
+  146  git add .
+  147  git commit -m "deleted cherry"
+  148  git checkout main
+  149  git merge
+  150  ls
+  151  git checkout merge
+  152  ls
+  153  git status
+  154  touch merge3
+  155  git add .
+  156  git commit -m "merge3"
+  157  git log --oneline
+  158  git checkout main
+  159  git merge
+  160  ls
+  161  git checkout merge
+  162  git merge
+  163  git checkout main
+  164  ls
+  165  git merge
+  166  git log --oneline
+  167  git checkout -m merge2
+  168  git checkout -b merge2
+  169  touch mer1 mer2
+  170  git add .
+  171  git commit -m "1merge2"
+  172  git checkout main
+  173  ls
+  174  tocuh file5
+  175  touch file5
+  176  ls
+  177  git add .
+  178  git commit -m "mfile5"
+  179  touch file6
+  180  git add .
+  181  git commit -m "mfile6"
+  182  git checkout merge2
+  183  ls
+  184  touch mer3
+  185  git add .
+  186  git commit -m "2mer3"
+  187  git log --oneline
+  188  git checkout main
+  189  git merge
+  190  git merge merge2
+  191  git log --oneline
+  192  git merge merge
+  193  git log --oneline
+  194  git checkout -b rebase
+  195  touch rebase1
+  196  git add .
+  197  git commit -m "1rebase"
+  198  git checkout main
+  199  ls
+  200  touch file7
+  201  git add .
+  202  git commit -m "mfile7"
+  203  touch file8
+  204  git add .
+  205  git commit -m "mfile8"
+  206  git checkout rebase
+  207  ls
+  208  touch rebase2
+  209  git log --oneline
+  210  git add .
+  211  git commit -m "2rebase"
+  212  git checkout main
+  213  git rebase rebase
+  214  ls
+  215  git log --oneline
+  216  git fetch
+  217  git fetch
+  218  ls
+  219  git fetch
+  220  git fetch
+  221  git push
+  222  git pull
+  223  ls
+  224  git push
+  225  history
+
+GitHubGitHub
+GitHub - PawanTirumala/branch
+Contribute to PawanTirumala/branch development by creating an account on GitHub. (32 kB)
+https://github.com/PawanTirumala/branch.git
+
+
+
+Pawan_Tirumala
+  5:11 PM
+https://www.jenkins.io/download/thank-you-downloading-windows-installer-stable/
+
+jenkins.iojenkins.io
+Thank you for downloading Windows Stable installer
+Jenkins – an open source automation server which enables developers around the world to reliably build, test, and deploy their software (35 kB)
+https://www.jenkins.io/download/thank-you-downloading-windows-installer-stable/
+
+
+
+Pawan_Tirumala
+  6:15 PM
+https://dev.to/aws-builders/installing-jenkins-on-amazon-ec2-491e
+
+DEV CommunityDEV Community
+Installing Jenkins on Amazon EC2
+Prerequisite: You will need to have an Amazon account Log into your amazon account and launch and... (59 kB)
+https://dev.to/aws-builders/installing-jenkins-on-amazon-ec2-491e
+
+6:15
+https://pkg.jenkins.io/debian-stable/
+
+
+Pawan_Tirumala
+  8:28 PM
+
+
+
+Tulasi Swathi
+Word Document
+ 
+
+AWS assessment questions.docx
+Word Document
+Direct Message | Dec 3rd | View conversation
+
+
+Pawan_Tirumala
+  10:04 AM
+https://www.linkedin.com/pulse/how-mount-efs-ec2-instance-create-symbolic-link-between-esther-love
+
+linkedin.comlinkedin.com
+How to mount an EFS to an EC2 instance and create a symbolic link between them
+As part of the web deployment process, you may run out of storage on your EC2 instance due to continuous deployment and integration (CI/CD) and you may need to redirect certain files to a larger storage location such as EFS. The choice between EBS and EFS will vary depending on the use case. (64 kB)
+Written by
+Esther Love
+Reading time
+3 min read
+https://www.linkedin.com/pulse/how-mount-efs-ec2-instance-create-symbolic-link-between-esther-love
+
+10:04
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ExportSnapshot.html#USER_ExportSnapshot.SetupIAMRolev
+
+docs.aws.amazon.comdocs.aws.amazon.com
+Exporting DB snapshot data to Amazon S3 - Amazon Relational Database Service
+Export data from Amazon RDS database snapshots to Amazon S3.
+
+
+Pawan_Tirumala
+  10:30 AM
+#!/bin/bash
+sudo echo "hello Roothoot" > file1.txt
+sudo apt update
+sudo apt install apache2 -y
+sudo sytemctl start apache2
+
+
+revathi
+  6:12 PM
+Date
+ Task/Work Description
+ Hours Spent
+ Remarks
+
+
+revathi
+  2:50 PM
+student login code web appli
+2:50
+anti
+2:50
+tomcat nginx k
+
+
+Pawan_Tirumala
+  3:43 PM
+c category
+3:44
+nadhagara adhi undhi
+
+
+revathi
+  4:18 PM
+peering ienda
+
+
+revathi
+  4:53 PM
+peering
+
+
+Pawan_Tirumala
+  5:22 PM
+Haaa
+
+
+revathi
+  5:26 PM
+peering avala
+
+
+Pawan_Tirumala
+  5:34 PM
+crt ga ichava vpc dhi
+5:34
+acceptor edho reciver edho
+
+
+revathi
+  5:35 PM
+def-reciver acc -own
+
+
+Pawan_Tirumala
+  5:38 PM
+accept chesava connection
+
+
+revathi
+  5:42 PM
+cheasa
+5:43
+peer avala
+
+
+Pawan_Tirumala
+  5:43 PM
+adhi enti endhuku avdhu
+5:43
+def -orign chey
+
+
+Pawan_Tirumala
+  10:44 AM
+https://www.bharathwick.com/how-to-install-tomcat-on-aws-linux/
+
+BharathwickBharathwick
+How to Install Tomcat on AWS Linux - Step by Step Guide
+Tomcat is a popular open-source web server and servlet container that supports Java web applications. In this blog post, I will show you how to install Tomcat on AWS Linux 2023.
+Dec 1st (94 kB)
